@@ -10,7 +10,7 @@ int hashArray(string s , char ch){
     // }
     // return hash[ch-'a'];
 
-    // for all chars including symbol
+    // for all chars including symbol.
 
     int hash[256] = {0};
     for(int i=0;i<s.size();i++){
