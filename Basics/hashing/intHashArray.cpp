@@ -2,7 +2,7 @@
 using namespace std;
 
 const int N = 1e7 + 10;
-int hashArr[N]; // large enough for any element
+int hashArr[N]; // large enough for any element.
 
 int hashArray(int arr[], int size, int num) {
     //prestoring 
