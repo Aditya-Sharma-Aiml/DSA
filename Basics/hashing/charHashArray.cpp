@@ -14,7 +14,7 @@ int hashArray(string s , char ch){
 
     int hash[256] = {0};
     for(int i=0;i<s.size();i++){
-         hash[s[i]]++; // s[i] ->auto casted into ASCII code
+         hash[s[i]]++; // s[i] ->auto casted into ASCII code smjhe
     }
     return hash[ch];
 }
