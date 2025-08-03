@@ -1,2 +1,81 @@
+# === IDE Folders ===
+.idea/
 .vscode/
-**/.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# === OS Files ===
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# === Build and Output Files ===
+*.exe
+*.out
+*.class
+*.o
+*.obj
+*.so
+*.dll
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+build/
+dist/
+bin/
+debug/
+release/
+
+# === Logs and temp files ===
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+
+# === Node and Web Files (if using JS) ===
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+pnpm-lock.yaml
+.env
+
+# === Java Maven/Gradle ===
+target/
+.gradle/
+build/
+
+# === Python virtual environments ===
+venv/
+env/
+.venv/
+.env/
+
+# === Git backup ===
+*.orig
+
+# === Coverage and testing ===
+coverage/
+*.lcov
+
+# === JetBrains ===
+*.iml
+*.ipr
+*.iws
+out/
+
+# === CMake ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Misc ===
+*.pdf
+*.zip
+*.tar
+*.gz
+*.7z
