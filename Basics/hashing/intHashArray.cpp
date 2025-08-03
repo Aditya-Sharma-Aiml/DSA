@@ -8,6 +8,7 @@ int hashArray(int arr[], int size, int num) {
     //prestoring 
     for(int i = 0; i < size; i++) {
         hashArr[arr[i]]++;
+        
     }
     return hashArr[num];  
 }
