@@ -4,8 +4,9 @@ using namespace std;
 void bubbleSort(int arr[],int n){
     int run=0;
     for(int i=n-1 ; i>=1 ; i--){
-
-        int did_swap =0;  // optimal o(n) -> best case
+        // optimal o(n) -> best case
+        // worst and avg case -> o(n^2)
+        int did_swap =0;  
 
         for(int j=0 ;j <=i ; j++){
 
