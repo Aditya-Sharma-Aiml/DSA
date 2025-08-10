@@ -1,4 +1,1 @@
-Before Using insertion Sort: 
-13 46 24 52 20 9 
-After Using insertion sort: 
-9 13 20 24 46 52 
+0 1 2 3 4 5 6 7 8 9 
