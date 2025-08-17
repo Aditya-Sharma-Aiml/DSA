@@ -31,5 +31,14 @@ int main(){
     cout << "firstvalue is " << firstvalue << endl;
     cout << "secondvalue is " << secondvalue << endl;
     cout << "thirdvalue is " << thirdvalue << endl;
-    return 0;
+    
+
+    int arr[10]={2,8,5};
+    cout << arr << endl; 
+    cout<< arr+1 << endl;
+
+    int j =2;
+    cout << arr[j] << " = "  << *(arr+j) << endl;
+    cout << j[arr] << " = "  << *(j+arr) << endl; // no error
+
 }
