@@ -10,7 +10,7 @@ c. 45 to 49 - D
 d. 50 to 59 - C 
 e. 60 to 79 - B 
 f. 80 to 100 - A 
-
+//
 Ask user to enter marks and print the corresponding grade.
 */
 
