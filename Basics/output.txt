@@ -1,1 +1,0 @@
-Intersection of arr1 and arr2: 4 5 

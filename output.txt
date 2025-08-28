@@ -1,0 +1,2 @@
+Intersection of Sorted arr1 and arr2: 4 5 9 4 
+Intersection of arr1 and arr2(array is not sorted): 4 5 9 4 
