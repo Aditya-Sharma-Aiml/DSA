@@ -1,1 +1,1 @@
-missing num is (xor): 7
+abcdabcd
