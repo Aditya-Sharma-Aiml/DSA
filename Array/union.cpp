@@ -1,8 +1,10 @@
 #include<vector> 
 #include<iostream>
 #include<set>
+#include<unordered_set>
+
 using namespace std;
-// union from two sorted array
+// union of two sorted array
 vector<int> unionBruteForce( vector<int> &arr1 ,vector<int> &arr2 ){
     set<int>st;
     for(auto it : arr1){
@@ -60,6 +62,19 @@ vector<int> unionOptimalTwoPointer( vector<int> &arr1 ,vector<int> &arr2 ){
             i++;
     }
     return Union;
+}
+
+// union of two unsorted array
+vector<int> UnionUnsorted(vector<int> &arr1 , vector<int>&arr2){
+
+    unordered_set<int> s;
+
+    for (int num : arr1) s.insert(num);
+    for (int num : arr2) s.insert(num);
+
+    return vector<int>(s.begin(), s.end());
+
+
 }
 int main(){
     int n;

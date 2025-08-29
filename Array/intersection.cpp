@@ -25,6 +25,7 @@ vector<int> intersectionOfSortedArray(vector<int>& arr1, vector<int>& arr2) {
     }
     return ans;
 }
+// intersection of two unsorted array
 vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
         
         if (nums1.size() > nums2.size()) {
@@ -34,6 +35,7 @@ vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
         unordered_map<int,int>count;
 
         vector<int>result;
+        
         for(auto num1 : nums1){
             count[num1]++;
         }
