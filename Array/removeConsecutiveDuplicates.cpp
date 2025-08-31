@@ -3,7 +3,7 @@ using namespace std;
 
 string removeDuplicate(string &s)
 {
-    // Write your code here
+    
     string res ="";
     for(int i = 0 ; i<s.size() ; i++){
         
