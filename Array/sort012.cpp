@@ -26,7 +26,7 @@ void sort012(vector<int>&arr){
     }
 
 }
-// optimal approach : dutch national flag algorithm 
+// optimal approach : Dutch National Flag Algorithm 
 void sort012s(vector<int>&arr){
 
     int n = arr.size();
