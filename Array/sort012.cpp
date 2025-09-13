@@ -26,6 +26,30 @@ void sort012(vector<int>&arr){
     }
 
 }
+// optimal approach : dutch national flag algorithm 
+void sort012s(vector<int>&arr){
+
+    int n = arr.size();
+    int low = 0 , mid = 0 , high = n-1;
+
+    while(mid<=high){
+
+        if(arr[mid]==0){
+            swap(arr[mid],arr[low]);
+            low++;
+            mid++;
+        }
+
+        else if(arr[mid]==1){
+            mid++;
+        }
+
+        else{
+            swap(arr[mid],arr[high]);
+            high--;
+        }
+    }
+}
 int main(){
     int n ;
     cin >> n ;
@@ -35,7 +59,8 @@ int main(){
         cin >> x;
         arr.push_back(x);
     }
-    sort012(arr);
+    // sort012(arr);
+    sort012s(arr);
     for(auto num : arr){
         cout << num << " ";
     }
