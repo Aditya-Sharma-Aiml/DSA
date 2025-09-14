@@ -16,7 +16,8 @@ long long maximumSubarraySum(vector<int> &arr){
     for(int i=0 ; i<n ; i++){
 
         sum += arr[i];
-        if(sum > maxi ) maxi = sum;
+        maxi = max(maxi,sum);
+        //if(sum > maxi ) maxi = sum;
         if(sum < 0) sum = 0;
     }
     return max(0LL , maxi);
