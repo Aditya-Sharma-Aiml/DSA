@@ -1,2 +1,1 @@
-sum : 7
-Array that have Maximum Sub Array sum : 4 -1 -2 1 5 
+5
