@@ -74,7 +74,7 @@ int betterLongestSuccessiveElements(vector<int>&arr){
     return longest;
 }
 
-//Optimal Approach : 
+//Optimal Approach : Time => O(3N) , space => O(N)
 int longestSuccessiveElements(vector<int>&arr) {
     int n= arr.size();
     if(n==0) return 0;
