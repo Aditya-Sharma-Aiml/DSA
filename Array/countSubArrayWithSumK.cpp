@@ -28,7 +28,8 @@ int countSubArrayWithSumK(vector<int> &arr , int k){
     int n=arr.size();
 
     unordered_map<int,int>mpp;
-    mpp[0]=1;
+
+    mpp[0]=1; // initialize that presum = 0 with count 1
     int preSum = 0;
     int count = 0;
 
