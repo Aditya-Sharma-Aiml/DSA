@@ -38,14 +38,14 @@ int countSubArrayWithSumK(vector<int> &arr , int k){
         // add current element to prefix Sum:
         preSum += arr[i];
 
-        // Calculate x-k:
-        int remove = preSum - k;
+        // Calculate s-k:
+        int rem = preSum - k;
 
-        // Add the number of subarrays to be removed:
-        count += mpp[remove];
+        // Add the number of subarrays are earlier exists:
+        if(mpp.count(rem)==1) count += mpp[rem];
 
         // Update the count of prefix sum  in the map
-        mpp[preSum] += 1;
+        mpp[preSum] ++;
     }
     return count;
 
