@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// majorityElement that appears > n/2 times
+// majorityElement that appears > n/2 times -> at max one element
 
 //Brute force (n^2)
 int majorityElement(vector<int>&arr){
