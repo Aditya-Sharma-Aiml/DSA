@@ -82,7 +82,7 @@ vector<vector<int>> fourSumUsingHashing(vector<int>& nums, int target) {
 
 // Optimal : Two Pointer Approach
 
-// Time Complexity: O(N3), where N = size of the array.
+// Time Complexity: O(N^3), where N = size of the array.
 // Space Complexity: O(no. of quadruplets)
 
 vector<vector<int>> fourSum(vector<int>& nums, int target) {
