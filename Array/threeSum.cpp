@@ -79,7 +79,7 @@ vector<vector<int>> BetterApproachTriplet(int n, vector<int> &arr) {
 // Optimal : Two Pointer Approach
 
 // Time Complexity: O(NlogN)+O(N2), where N = size of the array.
-// Space Complexity: O(no. of quadruplets)
+// Space Complexity: O(no. of Triplets)
 
 
 vector<vector<int>> triplet(int n, vector<int> &arr) {
