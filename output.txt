@@ -1,1 +1,2 @@
-4
+The merged intervals are: 
+
