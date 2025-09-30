@@ -2,7 +2,7 @@
 using namespace std;
 
 //Brute Force :O(n^2)
-int maxProductSubArrayBruteForce(vector<int>& nums) {
+int maxProductSubArray_BruteForce(vector<int>& nums) {
     int result = nums[0];
     for(int i=0;i<nums.size()-1;i++) {
         int p = nums[i];
@@ -37,6 +37,21 @@ int maxProductSubArray(vector<int> &arr) {
     return ans;
 }
 
+//using kadan's Algo
+
+int maxProductSubArray_Using_Kadans_Algo(vector<int>& nums) {
+    int prod1 = nums[0],prod2 = nums[0],result = nums[0];
+    
+    for(int i=1;i<nums.size();i++) {
+        int temp = max({nums[i],prod1*nums[i],prod2*nums[i]});
+        prod2 = min({nums[i],prod1*nums[i],prod2*nums[i]});
+        prod1 = temp;
+        
+        result = max(result,prod1);
+    }
+    
+    return result;
+}
 int main()
 {
     vector<int> arr = {1, 2, -3, 0, -4, -5};
