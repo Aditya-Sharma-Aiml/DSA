@@ -15,6 +15,8 @@ int maxProductSubArrayBruteForce(vector<int>& nums) {
     return result;
 }
 
+// Optimal : O(N)
+
 int maxProductSubArray(vector<int> &arr) {
 
     int n = arr.size(); 
