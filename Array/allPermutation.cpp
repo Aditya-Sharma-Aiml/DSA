@@ -1,5 +1,5 @@
-#include <iostream>
-#include <vector>
+#include <bits/stdc++.h>
+
 using namespace std;
 
 // Approach -1: using extra space => a freq array for marking and a data structure for storing
@@ -54,16 +54,19 @@ class Solution {
 
             if (index == nums.size()) { // base case
             
-            ans.push_back(nums);
-            return;
+                ans.push_back(nums);
+                return;
             }
+            // Note : if i want unique permutations:
+            // unordered_set<int>used;
 
             for (int i = index; i < nums.size(); i++) {
 
-                swap(nums[index], nums[i]);
-
-                recurPermute(index + 1, nums, ans);
-
+                // if(used.count(nums[i])) continue;
+                // used.insert(nums[i]);
+                
+                swap(nums[index], nums[i]); // swap
+                recurPermute(index + 1, nums, ans); // next pointer move call
                 swap(nums[index], nums[i]); // reswap after back
             }
         }
