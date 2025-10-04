@@ -7,14 +7,14 @@ using namespace std;
 
 int upperBound(vector<int> arr, int n, int x) {
     int low = 0, high = n - 1;
-    int lower_bound= n;
+    int upper_bound= n;
 
     while (low <= high) {
         int mid = (low + high) / 2;
         // maybe an answer
         if (arr[mid] > x) {
 
-            lower_bound = mid;
+            upper_bound = mid;
             //look for smaller index on the left
             high = mid - 1;
         }
@@ -22,8 +22,8 @@ int upperBound(vector<int> arr, int n, int x) {
             low = mid + 1; // look on the right
         }
     }
-    return  lower_bound;
-;
+    return  upper_bound;
+
 }
 
 int main()
