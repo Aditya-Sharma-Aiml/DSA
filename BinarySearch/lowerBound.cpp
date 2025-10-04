@@ -23,7 +23,7 @@ int lowerBound(vector<int> arr, int n, int x) {
         }
     }
     return  lower_bound;
-;
+
 }
 
 int main()
