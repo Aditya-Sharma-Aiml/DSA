@@ -74,9 +74,5 @@ int main(){
     for(auto index : resultIndices){
         cout << index << " ";
     }
-    
-
-
-
 
 }

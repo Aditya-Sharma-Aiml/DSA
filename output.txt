@@ -1,1 +1,2 @@
-The Kth permutation sequence is 3412
+YES
+1 2 
