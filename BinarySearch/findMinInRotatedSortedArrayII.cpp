@@ -3,6 +3,7 @@
 using namespace std;
 
 // O(logN)
+// Array : contain Duplicate Element
 
 int findMin(vector<int>& arr) {
 
@@ -11,12 +12,19 @@ int findMin(vector<int>& arr) {
 
     while (low <= high) {
 
-        int mid = (low + high) / 2;
+        int mid = low + (high - low) / 2;
 
         //search space is already sorted then arr[low] will always be the minimum in that search space:
-        if (arr[low] <= arr[high]) {
+        if (arr[low] < arr[high]) {
             ans = min(ans, arr[low]);
             break;
+        }
+        if(arr[low] == arr[mid] && arr[mid] == arr[high]){ // handle duplicates
+                //shrink search space
+                ans = min(ans , arr[low]);
+                low = low + 1;
+                high = high - 1;
+                continue;
         }
 
         //if left part is sorted:
@@ -41,7 +49,7 @@ int findMin(vector<int>& arr) {
 
 int main()
 {
-    vector<int> arr = {4, 5, 6, 7, 0, 1, 2, 3};
+    vector<int> arr = {2,2,2,2,2,2,2,2,2,2,2,1,2,2,2,2,2,2,2};
     int ans = findMin(arr);
     cout << "The minimum element is: " << ans << "\n";
     return 0;

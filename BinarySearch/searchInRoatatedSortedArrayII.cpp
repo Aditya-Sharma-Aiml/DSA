@@ -3,7 +3,7 @@ using namespace std;
 
 // Optimal => Time Complexity: O(logN) for the best and average case. O(N/2) for the worst case
 
-// Array : contain Duplicat Elements
+// Array : contain Duplicate Elements
 bool searchInARotatedSortedArrayII(vector<int>&arr, int target) {
 
     int n = arr.size(); 
