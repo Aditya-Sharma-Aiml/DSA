@@ -49,7 +49,7 @@ int smallestDivisor(vector<int>& arr, int limit) {
 
         int mid = (low + high) / 2;
 
-        if (sumByD(arr, mid) <= limit) {
+        if (sumByD(arr, mid) <= limit) { // if possible go for smallest
             high = mid - 1;
         }
         else {
