@@ -2,6 +2,10 @@
 #include<vector>
 using namespace std;
 
+// NOTE :
+// 1-> each row is sorted but column is not 
+// 2-> last element of previous row is less than next first element of next row => entire matrix is sorted according to row
+
 // BruteForce : O(M*N)
 bool linearSearch(vector<vector<int>>&matrix , int target){
     
