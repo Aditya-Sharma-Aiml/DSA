@@ -1,3 +1,1 @@
-12
-12
-12
+The row with maximum no. of 1's is: 2
