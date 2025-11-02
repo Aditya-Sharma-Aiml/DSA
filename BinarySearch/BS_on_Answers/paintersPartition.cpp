@@ -34,7 +34,7 @@ int findLargestMinDistance(vector<int> &boards, int k) {
     //Apply binary search:
     while (low <= high) {
 
-        int mid = (low + high) / 2;
+        int mid = (low + high) / 2; // mid -> time
 
         int painters = countPainters(boards, mid);
 
