@@ -23,6 +23,8 @@ int findPeakElement(vector<int> &arr) {
     int n = arr.size(); 
 
     // Edge cases:
+    // we assume array=> -inifinte on -1 and nth index : -inf{1,2,3,4,5,6,7,8,9}-inf OR -inf{9,8,7,6,5,4,3,2,1}-inf
+    // so might be 9 -> peak : at 0 or n-1 pe
     if (n == 1) return 0;
     if (arr[0] > arr[1]) return 0;
     if (arr[n - 1] > arr[n - 2]) return n - 1;
