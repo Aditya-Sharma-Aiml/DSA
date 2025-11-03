@@ -1,10 +1,9 @@
-#include<iostream>
-#include<vector>
+#include<bits/stdc++.h>
 using namespace std;
 
-// NOTE :
-// 1-> each row is sorted but column is not 
-// 2-> last element of previous row is less than next first element of next row => entire matrix is sorted according to continuos row order
+// NOTE: 
+//1-> Integers in each row are sorted in ascending from left to right.
+// 2-> Integers in each column are sorted in ascending from top to bottom.
 
 // BruteForce : O(M*N)
 bool linearSearch(vector<vector<int>>&matrix , int target){
@@ -24,7 +23,7 @@ bool linearSearch(vector<vector<int>>&matrix , int target){
     
 }
 
-// Better : time=> O(N)+ O(LogM) = O(N)
+// Better : time=> O(N * log M)
 bool binarySearch(vector<int>arr , int target){
     int n = arr.size();
     int low = 0, high = n-1;
@@ -46,38 +45,40 @@ bool searchInMatrix_better(vector<vector<int>>&matrix , int target){
     for (int i = 0; i < n; i++)
     {   
         // target exist in a particular rowArray
-        // you can check like this only when matrix is sorted according to NOTE
-        if(matrix[i][0] <= target && target <= matrix[i][m-1]){
-            return binarySearch(matrix[i] , target);
-        }
+        
+        // you can't check like this because matrix is not  sorted as continuous row order => so you have to BS on each row
+        
+        // if(matrix[i][0] <= target && target <= matrix[i][m-1]){
+        //     return binarySearch(matrix[i] , target);
+        // }
+
+        // according to NOTE => BS on each row
+        bool flag =  binarySearch(matrix[i], target);
+        if (flag) return true;
     }
     return false;
     
 }
 
-// Optimal : time => O(log(N * M))
+// Optimal: time => O(N + M)
 bool searchElement(vector<vector<int>>& matrix, int target) {
-        int n = matrix.size();
-        int m = matrix[0].size();
+    int n = matrix.size();
+    int m = matrix[0].size();
 
-        int low = 0;
-        int high = m * n - 1;
+    // start from top right corner (you can also start from bottom left corner)
+    int row = 0, col = m - 1;
 
-        //imagine 2D as 1D
-        while(low <= high){
+    //traverse the matrix from (0, m-1):
+    while (row < n && col >= 0) {
 
-            int mid = low + (high - low)/2;
+        if (matrix[row][col] == target) return true;
 
-            int row = mid / m;
-            int col = mid % m;
+        else if (matrix[row][col] < target) row++;
 
-            if(matrix[row][col]==target) return true;
-            else if (target > matrix[row][col]) low = mid + 1;
-            else high = mid - 1;
-        }
-        return false;
-
+        else col--;
     }
+    return false;
+}
 int main(){
     int n, m;
     int target;
