@@ -1,2 +1,1 @@
-(())()()
-(())()()
+Longest Common Prefix: inter
