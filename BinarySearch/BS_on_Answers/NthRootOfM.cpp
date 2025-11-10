@@ -31,7 +31,7 @@ int NthRoot_BruteForce(int n, int m) {
     return -1;
 }
 
-// Optimal : O(logN)
+// Optimal : O(logM)
 
 //return 1, if == m:
 //return 0, if < m:
