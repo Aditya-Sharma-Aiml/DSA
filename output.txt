@@ -1,1 +1,1 @@
-Count of substrings with exactly 1 distinct characters = 7
+111221
