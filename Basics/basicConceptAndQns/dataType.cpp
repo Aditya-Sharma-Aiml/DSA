@@ -7,7 +7,7 @@ int main(){
     
     long z = 12;
     
-    long long y = 1200000000000000000;
+    long long y = 12000000000000000000;
 
     //xxxxxxxxxxxxxx float , double xxxxxxxxxxxxxx
     float x1 = 12;
