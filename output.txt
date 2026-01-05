@@ -1,1 +1,1 @@
-min move to make VPS :4
+Sorted stack (descending order): 9 5 3 -2 -7 
