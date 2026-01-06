@@ -9,8 +9,12 @@ void sayDigits(int n){
 
     int digit = n % 10;
     n /= 10;
+
+    // cout << say[digit] << " ";  -> ye recrsn ke phle hua toh reverse me krega digit print
+
     sayDigits(n);
-    
+
+    // after recursion call print krne se jb call stack me funcn return hoga tb hoga 
     cout << say[digit] << " ";
 }
 int main(){
