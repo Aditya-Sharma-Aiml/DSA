@@ -61,7 +61,9 @@ class Solution{
         cout <<" <==> null";
 
     }
-
+    
+    // xxxxxxxxxxx insert Before xxxxxxxxxxxx
+    
     // insert before head
     Node* insertBeforehead(Node* head, int val){
 
@@ -137,6 +139,82 @@ class Solution{
 
     }
 
+
+    // ================= INSERT AFTER  =================
+
+    // insert after head
+    Node* insertAfterHead(Node* head, int val){
+
+        if(head == nullptr) return head;
+
+        Node* front = head->next;
+        Node* newNode = new Node(val, head, front);
+
+        head->next = newNode;
+        if(front != nullptr){
+            front->prev = newNode;
+        }
+
+        return head;
+    }
+
+    // insert after tail
+    Node* insertAfterTail(Node* head, int val){
+
+        if(head == nullptr) return new Node(val);
+
+        Node* tail = head;
+        while(tail->next != nullptr){
+            tail = tail->next;
+        }
+
+        Node* newNode = new Node(val, tail, nullptr);
+        tail->next = newNode;
+
+        return head;
+    }
+
+    // insert after kth node
+    Node* insertAfterKth(Node* head, int val, int k){
+
+        if(head == nullptr || k <= 0) return head;
+
+        Node* temp = head;
+        int cnt = 0;
+
+        while(temp != nullptr){
+            cnt++;
+            if(cnt == k) break;
+            temp = temp->next;
+        }
+
+        if(temp == nullptr) return head;
+
+        Node* front = temp->next;
+        Node* newNode = new Node(val, temp, front);
+
+        temp->next = newNode;
+        if(front != nullptr){
+            front->prev = newNode;
+        }
+
+        return head;
+    }
+
+    // insert after given node
+    void insertAfterNode(Node* node, int val){
+
+        if(node == nullptr) return;
+
+        Node* front = node->next;
+        Node* newNode = new Node(val, node, front);
+
+        node->next = newNode;
+        if(front != nullptr){
+            front->prev = newNode;
+        }
+    }
+
 };
 int main(){
 
@@ -149,9 +227,14 @@ int main(){
     cout << endl;
 
     head = sol.insertBeforehead(head, 10);
-    head = sol.insertBeforeTail(head, 20);
+    head = sol.insertAfterHead(head, 11);
+    head = sol.insertBeforeTail(head, 20);    
+    head = sol.insertAfterTail(head, 21);
     head = sol.insertBeforeKth(head, 30, 3);
-    sol.insertBeforeNode(head->next->next->next->next, 200);
+    head = sol.insertAfterKth(head, 31, 4);
+
+    sol.insertBeforeNode(head->next->next, 100);
+    sol.insertAfterNode(head->next->next, 200);
 
     cout <<"After : ";
     sol.printList(head);
