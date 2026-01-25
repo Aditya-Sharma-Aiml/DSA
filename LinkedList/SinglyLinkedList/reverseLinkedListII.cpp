@@ -20,7 +20,11 @@ public:
         ListNode* dummy = new ListNode(0);
         dummy -> next = head; // imp
 
-        ListNode* leftPrev = dummy; // suru me  leftPrev dummy ko point baad me int left node ke phle ko point krega
+       // suru me  leftPrev dummy ko point krega
+        //baad me int left node ke phle ko point krega
+        // jisase agar 1 -> any node reverse krna ho toh crash na ho
+        ListNode* leftPrev = dummy; 
+
         ListNode* curr = head;
 
         for(int i=0; i<left-1; i++){
