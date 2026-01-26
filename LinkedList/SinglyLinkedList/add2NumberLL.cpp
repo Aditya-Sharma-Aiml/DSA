@@ -12,6 +12,9 @@ struct ListNode {
 
 class Solution {
 public:
+
+    //[T.C.-> O(max(N1, N2)) , S.C. -> O(max(N1, N2)) : to return the result] 
+
     ListNode* addTwoNumbers(ListNode* l1, ListNode* l2) {
 
        //Initialize a dummy node as a new node
@@ -41,7 +44,7 @@ public:
 
             //Carry gets added to sum in the node (carry=sum/10)
             sum += carry; 
-            
+
             carry = sum / 10;  // update the carry
 
             ListNode *newNode = new ListNode(sum % 10); 

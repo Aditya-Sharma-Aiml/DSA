@@ -19,7 +19,7 @@ public:
 
     // function to insert digit at the end
     Node* append(Node* head, int value) {
-        
+
         Node* newNode = new Node(value);
         if (!head) {
             return newNode;
@@ -61,7 +61,9 @@ public:
         return prev;
     }
 
-    // Function to add one to the number represented by the linked list
+    // xxxxxxx add one to the number represented by the linked list xxxxx
+    // xxxxxxxxxxxxx [T.C.-> O(3* (N)) , S.C. -> O(1)] xxxxxxxxxxxxxx
+
     Node* addOne(Node* head) {
 
         // Reverse the list to make least significant digit accessible

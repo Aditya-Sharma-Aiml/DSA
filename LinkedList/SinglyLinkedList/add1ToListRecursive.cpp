@@ -45,7 +45,10 @@ public:
 // Solution class having the addOne logic
 class Solution {
 public:
+
     // Recursive function to add one from least significant digit (rightmost node)
+    // xxxxxxxxxxxxx [T.C.-> O(N) , S.C. -> O(N)] xxxxxxxxxxxxxx
+
     int addOneUtil(Node* node) {
         // Base case: when reaching beyond last node, return carry = 1
         if (node == NULL) return 1;
@@ -66,7 +69,7 @@ public:
 
         // If carry remains after processing the head, create a new head node
         if (carry) {
-            
+
             Node* newHead = new Node(carry);
             newHead->next = head;
             head = newHead;
