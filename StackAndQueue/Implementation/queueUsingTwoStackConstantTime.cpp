@@ -17,8 +17,9 @@ class StackQueue {
     int pop() {
         // Shift input to output if output is empty
         if (output.empty()) {
-            
+
             while (!input.empty()) {
+                
                 output.push(input.top());
                 input.pop();
             }
@@ -39,7 +40,9 @@ class StackQueue {
     int peek() {
         // Shift input to output if output is empty
         if (output.empty()) {
+
             while (!input.empty()) {
+
                 output.push(input.top());
                 input.pop();
             }

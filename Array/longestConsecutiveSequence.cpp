@@ -82,9 +82,21 @@ int longestSuccessiveElements(vector<int>&arr) {
     int longest = 1;
     unordered_set<int>uset;
     
+    // phle sab ko set me daal do
+
     for(int i=0 ; i<n ;i++){ // O(N)
         uset.insert(arr[i]);
     }
+    
+    // ab ye check kro bari baari se ki 
+    // curr element se ek kam agar set me exist kr rha hai toh
+    // bhai jb wn hum traverse krte pahunchenge tb kuchh "kaam" karunga 
+    // to bs aage badho
+
+    // ab hum pahunch gye jiska prev exist kr rha 
+    // ek kaam kro tb tk seaching maro aor count badhate rho 
+    //jb tk tum currElement se ek jada paa rhe ho /
+    // bs thats it
 
     for(auto it : uset){ // O(2N) not N^2
 
