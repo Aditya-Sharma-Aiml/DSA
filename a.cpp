@@ -1,0 +1,7 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    // cout << "नमस्ते";
+    cout << "\u0928\u092E\u0938\u094D\u0924\u0947";
+}
