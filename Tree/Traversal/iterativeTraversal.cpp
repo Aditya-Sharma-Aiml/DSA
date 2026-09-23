@@ -1,37 +1,6 @@
-
+#include "../buildTree.hpp"
 #include <bits/stdc++.h>
 using namespace std;
-
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
-
-    Node(int d){
-        data = d;
-        left = right = NULL;
-    }
-};
-
-Node* buildTree(Node* root) {
-
-    cout << "Enter the data (-1 for NULL): ";
-    int data;
-    cin >> data;
-
-    if(data == -1)
-        return NULL;
-
-    root = new Node(data);
-
-    cout << "Enter the data for the left child of " << data << endl;
-    root->left = buildTree(root->left);
-
-    cout << "Enter the data for the right child of " << data << endl;
-    root->right = buildTree(root->right);
-
-    return root;
-}
 
 // with stack root left right but push in reverse order right left so that left is processed first
 vector<int> preOrder(Node* root){
@@ -166,8 +135,8 @@ vector<int> inOrder(Node* root){
 
 int main(){
     vector<int> ans;
-
-    Node* root = buildTree(NULL);
+    Tree tree;
+    Node* root = tree.buildTree(NULL);
     ans = inOrder(root);
 
     for(int i = 0; i < ans.size(); i++){

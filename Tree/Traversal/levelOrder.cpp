@@ -1,39 +1,7 @@
 #include<bits/stdc++.h>
+#include "../buildTree.hpp"
 using namespace std;
 
-#include <bits/stdc++.h>
-using namespace std;
-
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
-
-    Node(int d){
-        data = d;
-        left = right = NULL;
-    }
-};
-
-Node* buildTree(Node* root) {
-
-    cout << "Enter the data (-1 for NULL): ";
-    int data;
-    cin >> data;
-
-    if(data == -1)
-        return NULL;
-
-    root = new Node(data);
-
-    cout << "Enter the data for the left child of " << data << endl;
-    root->left = buildTree(root->left);
-
-    cout << "Enter the data for the right child of " << data << endl;
-    root->right = buildTree(root->right);
-
-    return root;
-}
 
 // Algorithm
 // Check whether the root is NULL; if so, the traversal is empty.
@@ -87,7 +55,8 @@ vector<vector<int >> levelOrderTraversal(Node* root){
 }
 int main(){
 
+    Tree tree;
     Node* root = NULL;
-    root = buildTree(root);
+    root = tree.buildTree(root);
     vector<vector<int >> ans = levelOrderTraversal(root);
 }

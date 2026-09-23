@@ -1,36 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
-
-    Node(int d){
-        data = d;
-        left = right = NULL;
-    }
-};
-
-Node* buildTree(Node* root) {
-
-    cout << "Enter the data (-1 for NULL): ";
-    int data;
-    cin >> data;
-
-    if(data == -1)
-        return NULL;
-
-    root = new Node(data);
-
-    cout << "Enter the data for the left child of " << data << endl;
-    root->left = buildTree(root->left);
-
-    cout << "Enter the data for the right child of " << data << endl;
-    root->right = buildTree(root->right);
-
-    return root;
-}
+#include "../buildTree.hpp"
 
 // Rule : 
 // state 1 : Preorder , {node, 1} -> {node, 2} -> {node->left, 1}
@@ -78,7 +48,10 @@ vector<vector<int>>preInPostTraversal(Node* root){
 
 int main(){
     
-    Node* root = buildTree(NULL);
+    Tree  tree;
+    Node* root = NULL;
+    root = tree.buildTree(root);
+
     vector<vector<int>> ans = preInPostTraversal(root);
 
     cout << "Preorder: ";
