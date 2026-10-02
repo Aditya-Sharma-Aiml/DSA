@@ -40,7 +40,7 @@ class DiagonalView {
             if (root == nullptr)
                 return;
 
-            if (diagonal == diagonals.size())
+            if (diagonal == diagonals.size()) // If we are at a new diagonal level, we need to create a new vector for that diagonal
                 diagonals.push_back({});
 
             diagonals[diagonal].push_back(root->data);
