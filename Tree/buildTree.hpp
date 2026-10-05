@@ -53,5 +53,33 @@ public:
 
         return root;
     }
+    // Function to build a binary tree from a vector of integers (level order input)
+    Node* buildTree(vector<int>& arr) {
+        if (arr.empty()) return NULL;
+
+        Node* root = new Node(arr[0]);
+        queue<Node*> q;
+        q.push(root);
+
+        int i = 1;
+        while (i < arr.size()) {
+            Node* current = q.front();
+            q.pop();
+
+            if (arr[i] != -1) {
+                current->left = new Node(arr[i]);
+                q.push(current->left);
+            }
+            i++;
+
+            if (i < arr.size() && arr[i] != -1) {
+                current->right = new Node(arr[i]);
+                q.push(current->right);
+            }
+            i++;
+        }
+
+        return root;
+    }
 };
 #endif
